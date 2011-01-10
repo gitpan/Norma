@@ -1,5 +1,5 @@
 package Norma::ORM::Table;
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use Moose;
 
@@ -80,3 +80,20 @@ no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
+
+__END__
+
+=head1 NAME
+
+Norma::ORM::Table - Representation of a database table for use by other L<Norma> classes
+
+=head1 AUTHOR
+
+David Chester <davidchester@gmx.net>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010-2011 by David Chester.
+
+This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
+

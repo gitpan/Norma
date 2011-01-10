@@ -7,13 +7,9 @@ use strict;
 
 Norma - easy, limited, Moose-based ORM for the unafraid
 
-=head1 VERSION
-
-Version 0.01
-
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -75,7 +71,7 @@ See Norma::ORM::Collection for more about specifying criteria with joins and "wh
 
 =head1 RELATIONSHIPS
 
-When we compose the role we can optionally specify relationships.  This is up to us -- there's no magic to try and discover this.  
+When we compose the role we can also specify relationships.  This is up to us -- there's no magic to try and discover this.  
 
 Assuming we have an "authors" table with an id, name, and email, and assuming we have an author_id column in the "recipes" table, we can specify the relationship:
 
@@ -107,21 +103,21 @@ With the relationship defined, now we can access the author through the recipe:
 
 This related data is loaded lazily, only when we ask for it.  For has_many relationships, we get back a Collection instead of an instantiated object.
 
-For more see documentation for Norma::ORM::Mappable and Norma::ORM::Collection.
+For more see L<Norma::ORM::Mappable> and L<Norma::ORM::Collection>.
+
+=head1 SEE ALSO
+
+L<Norma::ORM::Mappable>, L<Norma::ORM::Collection>
 
 =head1 AUTHOR
 
-David Chester, C<< <davidchester at gmx.net> >>
+David Chester <davidchester@gmx.net>
 
-=head1 LICENSE AND COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2010-2011 David Chester
+This software is copyright (c) 2010-2011 by David Chester.
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
+This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
 
 =cut
 
